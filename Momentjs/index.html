@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .cont{
+            display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+        }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="date"  class="cont">Current date</div>
+      <div class="cont"><button onclick="datee()"  class="cont">Get Date</button></div>
+      
+      <div id ="time"  class="cont" >Current time</div>
+      <div class="cont"><button onclick="timee()">Get Time</button></div>
+      
+
+      <div ></div>
+    </div>
+    <script src="moment.js"></script>
+    <script>
+        var dateData=document.getElementById("date");
+        var timeData=document.getElementById("time");
+        console.log(dateData,timeData);
+        function datee(){
+           dateData.innerText=moment().format('MMMM Do YYYY');
+        }
+        function timee(){
+           timeData.innerText=moment().format('LT');
+        }
+    
+
+      var c = moment().format('MMMM Do YYYY, h:mm:ss a');;
+      console.log(c);
+    </script>
+  </body>
+</html>
