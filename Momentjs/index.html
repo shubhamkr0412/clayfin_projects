@@ -41,7 +41,7 @@
       <br />
       <div  class="cont" id="room">Room</div>
       <br />
-      <div class="cont" ><button >Book Room</button></div>
+      <div class="cont"  onclick="booking()"><button >Book Room</button></div>
       <br />
       <!-- <div class="cont">
         <div class="room">
@@ -56,16 +56,31 @@
     <script>
       var dateData = document.getElementById("date");
       var timeData = document.getElementById("time");
-      console.log(dateData, timeData);
+      var boo=document.getElementById("room");
+      
       function datee() {
         dateData.innerText = moment().format("MMMM Do YYYY");
       }
       function timee() {
-        timeData.innerText = moment().startOf('day').fromNow(); 
+        timeData.innerText = moment().format('LT');
+       
+      }
+      function booking(){
+      
+        let arr =  moment().format('LT')
+        arr=arr.split(/[ :]+/);
+      let[x,y,z]=arr;
+
+   if(x==5 && y>4 && y<30 && z==="PM" )
+   {
+boo.innerText="Booked";
+   } 
+
       }
 
+
       var c = moment().format("MMMM Do YYYY, h:mm:ss a");
-      console.log(c);
+     
     </script>
   </body>
 </html>
