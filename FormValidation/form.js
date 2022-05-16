@@ -8,10 +8,9 @@ let validUser = false;
 $('#failure').hide();
 $('#success').hide();
 
-// console.log(name, email, phone);
 name.addEventListener('blur', ()=>{
     console.log("name is blurred");
-    // Validate name here
+   
     let regex = /^[a-zA-Z]([0-9a-zA-Z]){2,10}$/;
     let str = name.value;
     console.log(regex, str);
@@ -48,7 +47,7 @@ email.addEventListener('blur', ()=>{
 
 phone.addEventListener('blur', ()=>{
     console.log("phone is blurred");
-    // Validate phone here
+    
     let regex = /^([0-9]){10}$/;
     let str = phone.value;
     console.log(regex, str);
@@ -72,15 +71,14 @@ submit.addEventListener('click', (e)=>{
     console.log('You clicked on submit');
     console.log(validEmail, validUser, validPhone);
     
-    // Submit your form here
+
     if(validEmail && validUser && validPhone){
         let failure = document.getElementById('failure');
 
         console.log('Phone, email and user are valid. Submitting the form');
         let success = document.getElementById('success');
         success.classList.add('show');
-        // failure.classList.remove('show');
-        // $('#failure').alert('close');
+       
         $('#failure').hide();
         $('#success').show();
         
@@ -89,8 +87,7 @@ submit.addEventListener('click', (e)=>{
         console.log('One of Phone, email or user are not valid. Hence not submitting the form. Please correct the errors and try again');
         let failure = document.getElementById('failure');
         failure.classList.add('show');
-        // success.classList.remove('show');
-        // $('#success').alert('hide');
+       
         $('#success').hide();
         $('#failure').show();
         }
