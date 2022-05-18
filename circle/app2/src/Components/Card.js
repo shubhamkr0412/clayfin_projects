@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Card.css";
+import Details from "./Details";
 
 export default class Card extends Component {
   constructor(props) {
@@ -8,22 +9,24 @@ export default class Card extends Component {
       pro: {},
     };
   }
-
   handleChange = (e) => {
-      console.log(e)
+
+    this.setState({ pro: e  })
+    
     }
 
-    srng = () =>
-    {
-        console.log(this.state.pro)
-    }
+
+   
 
     
 
 
   render() {
+    
     return (
+  
       <>
+      <Details/>
         <div className="containerr">
           {this.props.lists.map((curr) => {
             return (
