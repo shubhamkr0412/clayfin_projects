@@ -30,3 +30,16 @@ export default class App extends Component {
     )
   }
 }
+
+{this.props.data!== undefined ? 
+  <div className="details">
+      <div>
+          <img src={this.props.data.img} />
+      </div>
+      <div>
+          <h3>{"Name : "+this.props.data.price}</h3>
+          <h3>{"Price : "+this.props.data.Category}</h3>
+          <h3>{"Category : "+this.props.data.title}</h3>
+      </div>                
+  </div>        
+  : ""}

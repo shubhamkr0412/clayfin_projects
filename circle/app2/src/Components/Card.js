@@ -26,7 +26,7 @@ export default class Card extends Component {
     return (
   
       <>
-      <Details/>
+      <Details single={this.state.pro}/>
         <div className="containerr">
           {this.props.lists.map((curr) => {
             return (
