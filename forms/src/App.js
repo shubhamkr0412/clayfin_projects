@@ -10,7 +10,7 @@ export default class App extends Component {
       email:"",
       password:"",
       num:"",
-nameE:"",
+nameE:false,
     };
 
   }
@@ -35,12 +35,13 @@ nameE:"",
     this.handleName = (e) => {
  
       this.setState({ name: e.target.value  })
-      let regex = /^[a-zA-Z]([0-9a-zA-Z]){2,10}$/;
-      if(regex.test(this.state.name)){
-        this.setState({ nameE: ""  })
+      let regex = /^[A-Z]([0-9a-zA-Z]){2,10}$/;
+      if(regex.test(this.state.name )  ){
+        this.setState({ nameE: " "  })
        
       }
-      else{
+     
+      else {
         this.setState({ nameE: "Invalid Name "  })
       }
     };
@@ -51,20 +52,21 @@ nameE:"",
           <form>
             <label for="fname">First Name</label>
             <input
-             onBlur={(e)=>this.handleName(e)}
+             onChange={this.handleName}
               className="inp"
             
-              id="fname"
+              
               name="firstname"
               placeholder="Your name.."
-            /><div style={{margin:"auto"}}><label for="lname">{this.state.nameE}</label></div>
+            />  <label for="lname">{this.state.nameE}</label>
+            
         
 
           
             
             <label for="lname">Last Name</label>
             <input
-              onChange={this.handleLname}
+              onBlur={this.handleLname}
               className="inp"
               id="lname"
               name="lastname"
