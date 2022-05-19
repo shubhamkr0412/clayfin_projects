@@ -19,6 +19,7 @@ export default class App extends Component {
       emailE: "",
       numE: "",
       passwordE: "",
+      mode:true,
     };
   }
 
@@ -75,10 +76,16 @@ alert("Form Submitted Succesfully")
        
       }
     }
+    this.handleUpdate = () => {
+      this.setState({ mode: !this.state.mode });
+    };
 
     return (
-      <div className="main">
-        <div className="container">
+     
+        <div className="container"  id={this.state.mode ? "light" : "darkLight"} >
+        <div style={{ margin: "auto", width: "100px" }}>
+              <button  onClick={this.handleUpdate}>Change Theme</button>
+            </div>
           <form>
             <label for="fname">First Name</label>
             <input
@@ -129,7 +136,7 @@ alert("Form Submitted Succesfully")
             </div>
           </form>
         </div>
-      </div>
+ 
     );
   }
 }
