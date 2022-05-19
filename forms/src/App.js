@@ -86,10 +86,10 @@ alert("Form Submitted Succesfully")
               className="inp"
               name="firstname"
               placeholder="Your name.."
-            />{" "}
+            />
             <div>
-              {" "}
-              <label for="lname">{this.state.nameE}</label>
+           <label for="lname">{this.state.nameE}</label>
+              
             </div>
             <label for="lname">Email</label>
             <input
