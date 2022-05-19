@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import "./App.css"
 
 export default class App extends Component {
+  handlechange
   render() {
     return (
       <div className='main'><div className='container'>
       <form>
       <label for="fname">First Name</label>
-  <input type="text" id="fname" name="firstname" placeholder="Your name.." />
+  <input onChange={this.handlechange} type="text" id="fname" name="firstname" placeholder="Your name.." />
   <label for="lname">Last Name</label>
   <input type="text" id="lname" name="lastname" placeholder="Your last name.."/>
   <label for="lname">PassWord</label>
