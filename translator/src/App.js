@@ -6,7 +6,7 @@ import Two from './components/Two';
 function App() {
   return (
     <div className="App">
-      <h1>Srng Translator :) </h1>
+      <h1>HOC Translator :) </h1>
       <br />
       <One />
       <br />
