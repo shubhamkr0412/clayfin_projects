@@ -1,9 +1,20 @@
 import React from "react";
-import myContext from "./myContext";
+import MyContext from "./myContext";
+import { useState } from "react";
 
-export const myState = (props) => {
-    const state={
-        "mode":"Welcome"
+ const MyState = (props) => {
+    // const s1={
+    //     "mode":true,
+    //     "load":"Hiii",
+    // }
+    const s3={
+        "name":"Anu"
     }
-  return <myState.provider value={state}>{props.children}</myState.provider>;
+    const [mode, setMode] = useState(true);
+    const  handleUpdate = () => {
+      setMode(!mode)
+       };
+  return (<MyContext.Provider value={{mode ,handleUpdate,s3}}>{props.children}</MyContext.Provider>);
 };
+
+export default MyState;

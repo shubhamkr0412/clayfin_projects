@@ -1,17 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
-import { FirstPage } from './Components/FirstPage';
-import { myState} from './Context/myState';
+import { FirstPage } from "./Components/FirstPage";
+import MyState from "./Context/MyState";
 
 
 function App() {
   return (
-    
     <>
-      <myState>
-
-      </myState>
+   <MyState>
+     <FirstPage/>
+   </MyState>
     </>
   );
 }
