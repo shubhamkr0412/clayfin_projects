@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
+import themeHoc from "./Components/themeHoc";
 
-export default class App extends Component {
+ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -76,15 +77,16 @@ alert("Form Submitted Succesfully")
        
       }
     }
-    this.handleUpdate = () => {
-      this.setState({ mode: !this.state.mode });
-    };
+    console.log(this.props.mode);
+    // this.handleUpdate = () => {
+    //   this.setState({ mode: !this.state.mode });
+    // };
 
     return (
      
-        <div className="container"  id={this.state.mode ? "light" : "darkLight"} >
+        <div className="container"  id={this.props.mode ? "light" : "darkLight"} >
         <div style={{ margin: "auto", width: "100px" }}>
-              <button  onClick={this.handleUpdate}>Change Theme</button>
+              <button  onClick={this.props.handleUpdate}>Change Theme</button>
             </div>
           <form>
             <label for="fname">First Name</label>
@@ -140,3 +142,4 @@ alert("Form Submitted Succesfully")
     );
   }
 }
+export default themeHoc(App)
