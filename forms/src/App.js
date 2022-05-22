@@ -84,7 +84,7 @@ alert("Form Submitted Succesfully")
 
     return (
      
-        <div className="container"  id={this.props.mode ? "light" : "darkLight"} >
+        <div  id={this.props.mode ? "light" : "darkLight"} >
         <div style={{ margin: "auto", width: "100px" }}>
               <button  onClick={this.props.handleUpdate}>Change Theme</button>
             </div>
