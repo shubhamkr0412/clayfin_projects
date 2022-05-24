@@ -7,7 +7,8 @@ export default function Form() {
   console.log(typeof data.step + "kislat");
 
   return (
-    <div className="App">
+    <div className="container"  id={data.mode ? "light" : "darkLight"}>
+     <button onClick={data.handleUpdate}>Change Theme</button>
       <div className="stepper">
         {data.step.map((item, index) => (
           <div
@@ -153,9 +154,12 @@ export default function Form() {
                 Send
               </button>
             </div>
+           
           </form>
+         
         </div>
       )}
+      
     </div>
   );
 }

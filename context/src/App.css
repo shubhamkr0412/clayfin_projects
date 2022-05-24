@@ -5,10 +5,10 @@
 
 .container{
   
-  width: 550px;
-  height: 500px;
+  width: 700px;
+  height: 700px;
   margin: auto;
-  margin-top: 50px;
+
 }
 .inp {
   width: 93%;
@@ -85,6 +85,7 @@ button:hover {
 }
 
 .stepper {
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
