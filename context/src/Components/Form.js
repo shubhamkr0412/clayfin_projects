@@ -4,11 +4,11 @@ import { useContext } from "react";
 import myContext from "../Context/myContext";
 export default function Form() {
   const data = useContext(myContext);
-  console.log(typeof data.step + "kislat");
+ 
 
   return (
-    <div className="container"  id={data.mode ? "light" : "darkLight"}>
-     <button onClick={data.handleUpdate}>Change Theme</button>
+    <div className="container" id={data.mode ? "light" : "darkLight"}>
+      <button onClick={data.handleUpdate}>Change Theme</button>
       <div className="stepper">
         {data.step.map((item, index) => (
           <div
@@ -60,7 +60,7 @@ export default function Form() {
               <label for="lname"></label>
             </div>
             <div style={{ margin: "auto", width: "100px" }}>
-              <button onClick={data.handleSend}>Send</button>
+              <button onClick={data.handleSend}>First Page</button>
             </div>
           </form>
         </div>
@@ -105,7 +105,7 @@ export default function Form() {
               <label for="lname"></label>
             </div>
             <div style={{ margin: "auto", width: "100px" }}>
-              <button onClick={data.handleSend}>Send</button>
+              <button onClick={data.handleSend}>Second Page</button>
             </div>
           </form>
         </div>
@@ -151,15 +151,12 @@ export default function Form() {
             </div>
             <div style={{ margin: "auto", width: "100px" }}>
               <button onClick={data.handleLastSend} disabled={data.isDisable}>
-                Send
+                Submit
               </button>
             </div>
-           
           </form>
-         
         </div>
       )}
-      
     </div>
   );
 }
