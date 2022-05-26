@@ -22,3 +22,4 @@ i18n
   });
 
 i18n.changeLanguage('de');
+W6
